@@ -1,3 +1,4 @@
+package BOJ;
 // 실버 5 셀프 넘버
 public class BOJ_4673 {
 	public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package INF;
+package INF.String;
 import java.util.Scanner;
 // 인프런1 문자 찾기  
-public class INF_1 {
+public class INF_String_1 {
   public static void main(String[] args){
     Scanner in=new Scanner(System.in);
     String input1 = in.next().toLowerCase();

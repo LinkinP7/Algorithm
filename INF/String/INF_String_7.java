@@ -1,7 +1,7 @@
-package INF;
+package INF.String;
 import java.util.*;
 // 인프런7 회문 문자열
-class INF_7{
+class INF_String_7{
 	public String solution(String str){
         String answer = "YES";
       	str = str.toUpperCase();
@@ -15,7 +15,7 @@ class INF_7{
       	return answer;
 	}
 	public static void main(String[] args){
-		INF_7 T = new INF_7();
+		INF_String_7 T = new INF_String_7();
 		Scanner sc = new Scanner(System.in);
       	String str = sc.next();
 		System.out.println(T.solution(str));          

@@ -1,7 +1,7 @@
-package INF;
+package INF.String;
 import java.util.*;
 // 인프런8 유효한 팰린드롬
-class INF_8{
+class INF_String_8{
 	public String solution(String str){
         String answer = "NO";
         str = str.toUpperCase().replaceAll("[^A-Z]", "");    // 대문자 A ~ Z 가 아니면  "" 로 만들어라
@@ -11,7 +11,7 @@ class INF_8{
       	return answer;
 	}
 	public static void main(String[] args){
-		INF_8 T = new INF_8();
+		INF_String_8 T = new INF_String_8();
 		Scanner sc = new Scanner(System.in);
       	String str = sc.nextLine();
 		System.out.println(T.solution(str));          

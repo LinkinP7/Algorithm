@@ -1,7 +1,7 @@
-package INF;
+package INF.String;
 import java.util.Scanner;
 // 인프런6 중복문자제거  
-class INF_6 {
+class INF_String_6 {
     public String solution(String str){
         String answer = ""; 
         for(int i=0;i<str.length();i++){
@@ -11,7 +11,7 @@ class INF_6 {
         return answer;
     }
     public static void main(String[] args){
-        INF_6 T = new INF_6();
+        INF_String_6 T = new INF_String_6();
         Scanner sc = new Scanner(System.in);
         String n = sc.next();
         System.out.println(T.solution(n));

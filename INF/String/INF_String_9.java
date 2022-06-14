@@ -1,7 +1,7 @@
-package INF;
+package INF.String;
 import java.util.*;
 // 인프런9 숫자만 추출
-class INF_9{
+class INF_String_9{
 	public int solution(String str){
         int answer = 0;
 		for(char x : str.toCharArray()){
@@ -11,7 +11,7 @@ class INF_9{
       	return answer;
 	}
 	public static void main(String[] args){
-		INF_9 T = new INF_9();
+		INF_String_9 T = new INF_String_9();
 		Scanner sc = new Scanner(System.in);
       	String str = sc.nextLine();
 		System.out.println(T.solution(str));      
