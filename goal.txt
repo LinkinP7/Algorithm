@@ -1,0 +1,25 @@
+[inf]
+
+String - 12/12      22/6/14
+Array - 2/12        22/6/15 ?? 
+Two Pointer, Silding Window - 6   22/6/16 ??
+HashMap, TreeSet - 5   22/6/17 ??
+Stack,Queue - 8
+Sorting and Searching - 10
+Recursive,Tree,Gragh - 14
+DFS, BFS - 15
+Greedy - 8
+dynamic Programming - 6
+
+
+
+[alg]
+
+기본 하루 3개
+강의를 많이 듣는다면 1개
+
+
+6/9 백준 4
+6/10 백준 3
+6/13 백준 4
+6/14 백준 1
