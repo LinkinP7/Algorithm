@@ -1,5 +1,4 @@
-package BOJ;
-
+package TEM;
 import java.util.Arrays;
 
 public class Combination {

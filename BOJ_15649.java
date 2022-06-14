@@ -1,16 +1,12 @@
-package BOJ;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
-public class Main_BOJ_15649_N?_M1 {
+// 실버 3 N과 M (1)
+public class BOJ_15649 {
 	
 	static boolean[] V;
 	static int[] num, p;
 	static int N,R;
-
-	
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -25,7 +21,6 @@ public class Main_BOJ_15649_N?_M1 {
 		for (int i = 0; i < N; i++) {
 			p[i] = i+1;
 		}
-		
 		nPr(0);
 		
 	}
@@ -37,16 +32,13 @@ public class Main_BOJ_15649_N?_M1 {
 			}System.out.println("");
 			return;
 		}
-		
 		for (int i = 0; i < N; i++) {
 			if(V[i]) {
 				continue;
 			}
-			
 			V[i] = true;
 			num[cnt] = p[i];
 			nPr(cnt+1);
-			
 			V[i] = false;
 		}
 	}

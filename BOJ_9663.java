@@ -1,10 +1,11 @@
-package BOJ;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+// import java.util.Arrays;
+// 골드 4 N-Queen
 
-public class Main_BOJ_9663_N_Queen {
+//////////// 미해결 ////////////////
+
+public class BOJ_9663 {
 
 	static int N;
 	static int count =0;

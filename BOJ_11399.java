@@ -1,11 +1,9 @@
-package BOJ;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-
-public class Main_BOJ_11399_ATM {
+// ½Ç¹ö 4 ATM
+public class BOJ_11399 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		

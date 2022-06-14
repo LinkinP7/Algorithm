@@ -1,10 +1,8 @@
-package BOJ;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
-public class Main_BOJ_13305_林蜡家  {
+// 角滚 4 林蜡家
+public class BOJ_13305  {
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		

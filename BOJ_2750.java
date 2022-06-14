@@ -1,9 +1,7 @@
-package BOJ;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
-public class Main_BOJ_2750_수_정렬하기 {
+// 브론즈 2 수 정렬하기
+public class BOJ_2750 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		

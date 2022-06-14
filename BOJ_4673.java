@@ -1,6 +1,5 @@
-package BOJ;
-// ?? ??
-public class Main_BOJ_4673 {
+// 실버 5 셀프 넘버
+public class BOJ_4673 {
 	public static void main(String[] args) {
 		
 		boolean[] check = new boolean[10001];

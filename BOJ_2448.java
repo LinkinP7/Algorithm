@@ -1,6 +1,6 @@
-package BOJ;
 import java.util.*;
 // 골드 4 별 찍기 - 11
+//////////// 미해결 ////////////////
 public class BOJ_2448 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -1,11 +1,7 @@
-package BOJ;
-//입력값이 분해합된 자연수
-// 256의 생성자 245
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
-public class Main_BOJ_2231_분해합 {
+// 브론즈 2 분해합
+public class BOJ_2231 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -29,3 +25,7 @@ public class Main_BOJ_2231_분해합 {
 		System.out.println(result);
 	}
 }
+
+
+//입력값이 분해합된 자연수
+// 256의 생성자 245

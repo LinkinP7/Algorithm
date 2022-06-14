@@ -1,9 +1,7 @@
-package BOJ;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
-public class Main_BOJ_1436_영화감독_숌 {
+// 실버 5 영화감독 숌
+public class BOJ_1436 {
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		

@@ -1,4 +1,4 @@
-package BOJ;
+package TEM;
 
 public class Subset {
 

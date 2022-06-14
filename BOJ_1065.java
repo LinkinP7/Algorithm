@@ -1,10 +1,8 @@
-package BOJ;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
-// 각 자리의 수가 등차수열을 이루는 수
-public class Main_BOJ_1065_한수 {
+// 실버 4 한수
+// 한수 - 각 자리의 수가 등차수열을 이루는 수
+public class BOJ_1065 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		

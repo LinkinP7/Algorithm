@@ -1,10 +1,8 @@
-package BOJ;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
-public class Main_BOJ_1018_체스판_다시_칠하기 {
+// 실버 4 체스판 다시 칠하기
+public class BOJ_1018 {
 	
 	static boolean[][] chessBoard;
 	static int min = 64;
