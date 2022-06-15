@@ -1,7 +1,7 @@
 package INF.String;
 import java.util.*;
-// 인프런5 특정 문자 뒤집기
-class INF_String_5{
+// 인프런 5 특정 문자 뒤집기
+class INF_String_05{
 	public String solution(String str){
 		String answer = "";
      	int lt = 0, rt = str.length()-1;
@@ -24,7 +24,7 @@ class INF_String_5{
 		return answer;
 	}
 	public static void main(String[] args){
-		INF_String_5 T = new INF_String_5();
+		INF_String_05 T = new INF_String_05();
 		Scanner sc = new Scanner(System.in);
       	String str = sc.next();
       	System.out.println(T.solution(str));

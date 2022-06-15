@@ -1,6 +1,6 @@
 package INF.String;
 import java.util.*;
-// 인프런12 암호
+// 인프런 12 암호
 // class INF_12 {
 //     public String solution(String str, int N) {
 //         String answer = "";

@@ -1,7 +1,7 @@
 package INF.String;
 import java.util.Scanner;
-// 인프런3 문장 속 단어
-class INF_String_3{
+// 인프런 3 문장 속 단어
+class INF_String_03{
 	public String solution(String str){
 		String answer = "";
         int length = 0;
@@ -15,7 +15,7 @@ class INF_String_3{
 		return answer;
 	}
 	public static void main(String[] args){
-		INF_String_3 T = new INF_String_3();
+		INF_String_03 T = new INF_String_03();
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		System.out.println(T.solution(str));  

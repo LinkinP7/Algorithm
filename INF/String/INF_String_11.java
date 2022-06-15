@@ -1,6 +1,6 @@
 package INF.String;
 import java.util.*;
-// 인프런11 문자열 압축
+// 인프런 11 문자열 압축
 class INF_String_11 {
     public String solution(String str) {
         String answer = "";

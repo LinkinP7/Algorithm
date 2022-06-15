@@ -1,7 +1,7 @@
 package INF.String;
 import java.util.Scanner;
-// 인프런2 대소문자 변환
-class INF_String_2{
+// 인프런 2 대소문자 변환
+class INF_String_02{
 	public String solution(String str){
 		String answer = "";
       	for(char x : str.toCharArray()){
@@ -11,7 +11,7 @@ class INF_String_2{
 		return answer;
 	}
 	public static void main(String[] args){
-		INF_String_2 T = new INF_String_2();
+		INF_String_02 T = new INF_String_02();
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
 		System.out.println(T.solution(str)); 

@@ -1,6 +1,6 @@
 package INF.String;
 import java.util.*;
-// 인프런10 가장 짧은 문자거리
+// 인프런 10 가장 짧은 문자거리
 class INF_String_10 {
     public int[] solution(String str, String s) {
         int[] answer = new int[str.length()];

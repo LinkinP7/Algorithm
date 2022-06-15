@@ -1,6 +1,6 @@
 package INF.Array;
 import java.util.*;
-// 인프런13 큰 수 출력하기
+// 인프런 13 큰 수 출력하기
 // class INF_Array_1 {  // String 으로 끝내기
 // 	public String solution(int n, int[] arr){
 //         String answer = arr[0] + " ";
@@ -28,7 +28,7 @@ import java.util.*;
 
 
 // 풀이 - ArrayList 사용하기
-class INF_Array_1 {  
+class INF_Array_01 {  
 	public ArrayList<Integer> solution(int n, int[] arr){
         ArrayList<Integer> answer = new ArrayList<>();
         answer.add(arr[0]);
@@ -37,7 +37,7 @@ class INF_Array_1 {
         return answer;
 	}
 	public static void main(String[] args){
-		INF_Array_1 T = new INF_Array_1();
+		INF_Array_01 T = new INF_Array_01();
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
       	int[] arr = new int[n];

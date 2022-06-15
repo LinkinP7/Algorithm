@@ -1,7 +1,7 @@
 package INF.Array;
 import java.util.*;
 // 인프런 14 보이는 학생
-class INF_Array_2 {  
+class INF_Array_02 {  
 	public int solution(int n, int[] arr){
         int answer = 0;
         ArrayList<Integer> std = new ArrayList<>();
@@ -14,7 +14,7 @@ class INF_Array_2 {
         return answer;
 	}
 	public static void main(String[] args){
-		INF_Array_2 T = new INF_Array_2();
+		INF_Array_02 T = new INF_Array_02();
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
       	int[] arr = new int[n];
