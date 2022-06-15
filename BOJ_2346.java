@@ -1,4 +1,4 @@
-package BOJ;
+
 import java.util.*;
 // 실버 3 풍선 터뜨리기
 public class BOJ_2346 {
