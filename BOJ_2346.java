@@ -5,29 +5,74 @@ public class BOJ_2346 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        List<Integer> arr = new ArrayList<Integer>();
-        int[] check = new int[N];
+        LinkedList<Integer> balloon = new LinkedList<>();
+        String answer = "";
 
-        int[] answer = new int[N];
+        for(int i=1;i<=N;i++)
+            balloon.add(sc.nextInt());
+            
         for(int i=0;i<N;i++){
-            arr.add(sc.nextInt());
-            check[i] = arr.get(arr.size()-1);
-        }
-        sc.close();
-
-        answer[0] = 1;
-
-        int idx = 0, x=1;
-        for(int i=1;i<N-1;i++){
-            if(arr.get(idx) > 0){
-                answer[x] = idx+arr.get(idx);
-            }else{
-                answer[x] = N - Math.abs(idx-arr.get(idx)) - 1;
-            }
-            x++;
+            
         }
 
-        System.out.println(arr);
-        System.out.println(Arrays.toString(answer));
+
     }
+
 }
+
+
+
+
+// public class BOJ_2346 {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int N = sc.nextInt();
+//         List<Integer> balloon = new ArrayList<Integer>();
+//         List<Integer> pop = new ArrayList<Integer>();
+//         int[] check = new int[N];
+//         String answer = "";
+
+//         for(int i=0;i<N;i++){
+//             check[i] = sc.nextInt();
+//             balloon.add(check[i]);
+//         }
+//         sc.close();
+
+//         answer += 1+" ";
+//         check[0] = 0;
+//         int idx = 0, x=1, rank = 0;
+//         pop.add(balloon.get(0));
+//         while(x<N){
+//             if(idx+balloon.get(idx) > balloon.size()-1){
+//                 if((idx+balloon.get(idx))%balloon.size() == 0){
+//                     rank = idx+1;
+//                 }else{
+//                     rank = (idx+balloon.get(idx))%balloon.size();
+//                 }
+//             }else if(idx+balloon.get(idx) < 0){
+//                 if(Math.abs(balloon.get(idx)) == balloon.size()){
+//                     rank = idx-1;
+//                 }else{
+//                     rank = balloon.size() - 1 - (Math.abs(idx+balloon.get(idx))%balloon.size());
+//                 }
+//             }else{
+//                 rank = idx+balloon.get(idx);
+//             }
+//             pop.add(balloon.get(rank));
+
+//             // for(int i=0;i<N;i++){
+//             //     if(check[i]==balloon.get(rank)){
+//             //         answer += i+1+" ";
+//             //         check[i] = 0;
+//             //         break;
+//             //     } 
+//             // }
+
+//             balloon.remove(idx);
+//             idx = rank-1;
+//             x++;
+//         }
+//         System.out.println(pop);
+//         System.out.println(answer);
+//     }
+// }
