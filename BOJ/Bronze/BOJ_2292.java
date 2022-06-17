@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Bronze;
 import java.util.*;
 // 브론즈 2 벌집
 public class BOJ_2292 {

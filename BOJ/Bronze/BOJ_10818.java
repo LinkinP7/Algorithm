@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Bronze;
 import java.util.*;
 // 브론즈3 최소, 최대
 public class BOJ_10818 {

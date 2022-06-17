@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Bronze;
 import java.util.*;
 // 브론즈 2 단어의 개수
 public class BOJ_1152 {

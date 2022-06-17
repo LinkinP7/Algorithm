@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Bronze;
 import java.util.*;
 // 브론즈 1 단어 공부
 public class BOJ_1157 {

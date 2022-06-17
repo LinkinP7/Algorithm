@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Bronze;
 import java.util.*;
 // 브론즈 2 다이얼
 public class BOJ_5622 {

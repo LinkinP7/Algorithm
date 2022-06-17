@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Bronze;
 // 브론즈 2 정수 N개의 합
 public class BOJ_15596 {
     long sum(int[] a){

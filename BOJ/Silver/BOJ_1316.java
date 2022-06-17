@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Silver;
 import java.util.*;
 // 실버 5 그룹 단어 체커
 public class BOJ_1316 {

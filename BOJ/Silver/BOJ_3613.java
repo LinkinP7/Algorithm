@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Silver;
 import java.util.*;;
 // 실버 3 Java vs C++
 public class BOJ_3613 {

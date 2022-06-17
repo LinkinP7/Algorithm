@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Silver;
 // 실버 5 셀프 넘버 - 두번째 풀이
 public class BOJ_4673_Second {
     public static void main(String[] args) {

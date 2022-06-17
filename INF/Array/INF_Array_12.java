@@ -11,8 +11,6 @@ class INF_Array_12 {
                 
             }
         }
-
-
         return answer;
 	}
 	public static void main(String[] args){
@@ -33,3 +31,8 @@ class INF_Array_12 {
 
 // 시험 입력이 3 4 1 2 이렇게 오는데 1등부터 순서대로 학생의 번호가 들어오는 것이다
 // 3 1 4 2 -> 1등은 3번, 2등은 1번, 3등은 4번, 4등은 2번 학생이 된다.
+
+// 4 3
+// 3 4 1 2
+// 4 3 2 1
+// 3 1 4 2     ->    3

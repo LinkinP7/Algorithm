@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Silver;
 import java.util.*;
 // 실버 5 크로아티아 알파벳
 public class BOJ_2941 {

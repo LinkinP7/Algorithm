@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.Silver;
 import java.util.*;;
 // 실버 5 소트인사이드
 public class BOJ_1427 {
