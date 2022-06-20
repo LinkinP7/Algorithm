@@ -1,19 +1,19 @@
+package BOJ.Silver;
 import java.util.*;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 // 실버 4 큐 2
 public class BOJ_18258 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         Queue<Integer> queue = new LinkedList<>();
         StringBuilder answer = new StringBuilder();
         int last = 0;
-
-        StringTokenizer command = new StringTokenizer(br.readLine());
-
+        
         for(int i=0;i<N;i++){
-
+            StringTokenizer command = new StringTokenizer(br.readLine());
             switch(command.nextToken()){
                 case "push":    int value = Integer.parseInt(command.nextToken());
                                 last = value;
