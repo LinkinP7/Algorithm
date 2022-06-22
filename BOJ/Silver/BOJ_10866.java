@@ -1,3 +1,4 @@
+package BOJ.Silver;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
@@ -13,21 +14,19 @@ public class BOJ_10866 {
             int value = 0;
             StringTokenizer command = new StringTokenizer(br.readLine());
             switch(command.nextToken()){
-                case "push_front ": value = Integer.parseInt(command.nextToken());
-                                    System.out.println(value);
+                case "push_front":  value = Integer.parseInt(command.nextToken());
                                     dq.offerFirst(value);
-                                    System.out.println("testLog");
                                     break;
 
-                case "push_back ":  value = Integer.parseInt(command.nextToken());
-                                    dq.offer(value);  
+                case "push_back":   value = Integer.parseInt(command.nextToken());
+                                    dq.offerLast(value);  
                                     break;
 
                 case "pop_front":   if(!dq.isEmpty()) answer.append(dq.pollFirst()+"\n");
                                     else answer.append(-1+"\n");
                                     break;
 
-                case "pop_back":    if(!dq.isEmpty()) answer.append(dq.poll()+"\n");
+                case "pop_back":    if(!dq.isEmpty()) answer.append(dq.pollLast()+"\n");
                                     else answer.append(-1+"\n");  
                                     break;
 
@@ -35,7 +34,7 @@ public class BOJ_10866 {
                                     break;
 
                 case "empty":       if(dq.isEmpty()) answer.append(1+"\n");
-                                    else answer.append(-1+"\n");
+                                    else answer.append(0+"\n");
                                     break;
                 
                 case "front":       if(!dq.isEmpty()) answer.append(dq.peekFirst()+"\n");
@@ -46,7 +45,11 @@ public class BOJ_10866 {
                                     else answer.append(-1+"\n");
                                     break;
             }
+            // System.out.println("now:"+dq);
         }
         System.out.println(answer);
     }
 }
+
+
+// 문제를 잘 읽자... empty가 아니면을 -1 로 놓아서 3번틀렸다....
