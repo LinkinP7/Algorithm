@@ -1,6 +1,7 @@
 [inf]
 
 String - 12/12                       22/6/14
+
 Array - 11/12                        22/6/15  
 Two Pointer, Silding Window - 0/6    22/6/16 ??
 HashMap, TreeSet - 0/5               22/6/17 ??
@@ -25,9 +26,13 @@ dynamic Programming - 0/6            22/6
 6/14 백준2회차문제 1 
 6/15 백준 1
 6/17 백준 2
+6/20 백준 3
+6/21 백준 2
+6/22 백준 1
+
 
 // 다시 도전하기 => 2346(큐로 풀어보기)
-
+                   1966(다시풀기.. 개어렵) 
 
 
 
@@ -60,3 +65,6 @@ q.size();	// size
 q.isEmpty();	// empty
 q.peek();	// front
 q.peekLast();	// back
+
+offerLast()
+pollFirst()
