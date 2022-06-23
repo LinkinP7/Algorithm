@@ -3,14 +3,14 @@ import java.util.*;
 // 인프런 19 점수계산
 class INF_Array_07 {  
 	public int solution(int N, int[] arr){
-        int answer = 0, count = 1;
+        int answer = 0, count = 0;
 
         for(int i=0;i<N;i++){
             if(arr[i] == 1){
-                answer += count;
                 count++;
+                answer += count;
             }else
-                count = 1;
+                count = 0;
         }
 
         return answer;

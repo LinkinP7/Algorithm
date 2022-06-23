@@ -38,3 +38,27 @@ class INF_Array_06 {
 
 // 9
 // 32 55 62 20 250 370 200 30 100    ->   23 2 73 2 3
+
+
+// public boolean isPrime(int num){
+//     if(num==1) return false;
+//     for(int i=2; i<num; i++){
+//         if(num%i==0) return false; // 2~i까지 중에 약수가 발견되면 false
+//     }
+//     return true;
+// }
+
+// public ArrayList<Integer> solution(int N, int[] arr){
+//     ArrayList<Integer> answer = new ArrayList<>();
+//     for(int i=0;i<N;i++){
+//         int tmp = arr[i];
+//         int res = 0;  // tmp를 뒤집기
+//         while(tmp>0){
+//             int t=tmp%10;
+//             res = res*10+t;
+//             tmp = tmp/10;
+//         }
+//         if(isPrime(res)) answer.add(res);
+//     }
+//     return answer;
+// }
