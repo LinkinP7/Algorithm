@@ -8,18 +8,18 @@ public class BOJ_3078 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
-        String[] classMate = new String[N];
+        int[] classMate = new int[N];
         int answer = 0;
         for(int i=0;i<N;i++)
-            classMate[i] = br.readLine().toString();
+            classMate[i] = br.readLine().toString().length();
         
+        for(int i=K;i>0;i--){
+            // classMate[i]
+        }
+
         for(int i=0;i<N-1;i++){
             int count = 0;
-            for(int j=i+1; j<N; j++){
-                count++;
-                if(classMate[i].length() == classMate[j].length()) answer++;
-                if(count == K) break;
-            }
+     
         }
         // System.out.println(Arrays.toString(classMate));
         System.out.println(answer);
