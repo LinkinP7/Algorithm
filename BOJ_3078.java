@@ -18,7 +18,7 @@ public class BOJ_3078 {
         }
 
         for(int i=0;i<N-1;i++){
-            int count = 0;
+            // int count = 0;
      
         }
         // System.out.println(Arrays.toString(classMate));

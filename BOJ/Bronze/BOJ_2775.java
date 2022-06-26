@@ -9,6 +9,7 @@ public class BOJ_2775 {  // 2차원배열
             int answer = 0;
             int k = sc.nextInt();
             int n = sc.nextInt();
+            sc.close();
             int[][] apt = new int[k+1][n+1];
             
             for(int j=0;j<=k;j++){
