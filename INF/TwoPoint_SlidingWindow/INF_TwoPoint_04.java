@@ -7,24 +7,20 @@ class INF_TwoPoint_04{
         int cursor = 0, idx = 0;
         System.out.println(Arrays.toString(arr));
         while(idx < N){
-            // if(arr[idx] == K){
-                //     answer++;
-                //     cursor = idx;
-                //     sum = 0;
-                //     continue;
-                // }
             if(sum < K){
                 sum += arr[idx];
                 idx++;
             }else if(sum == K){
-                answer++;
                 sum -= arr[cursor];
                 cursor++;
+                answer++;
             }else{
                 sum -= arr[cursor];
                 cursor++;
             }
         }
+        if(sum == K) answer++;
+
         return answer;
 	}
 	public static void main(String[] args){
