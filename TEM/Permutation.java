@@ -29,15 +29,12 @@ public class Permutation {
       }
 
       for (int i = 0; i < N; i++) {
-         if (v[i]) {
-            continue;
-         }
-
+         if (v[i]) continue;
+         
          v[i] = true;
          num[cnt] = p[i];
          nPr(cnt + 1);
          v[i] = false;
-
       }
    }
 }

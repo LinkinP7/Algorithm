@@ -27,7 +27,7 @@ public class Subset {
 	            System.out.print((v[i] ? p[i] : "x") + " ");
 	         }
 	         System.out.println();
-	         System.out.println(sum);
+	         System.out.println(sum);  // 합 출력
 	         return;
 	      }
 

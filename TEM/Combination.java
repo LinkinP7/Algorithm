@@ -19,7 +19,6 @@ public class Combination {
    }
 
    private static void nCr(int cnt, int start) {
-
       if (cnt == R) {
          tot++;
          System.out.println(Arrays.toString(num));
@@ -27,9 +26,7 @@ public class Combination {
       }
 
       for (int i = start; i < N; i++) {
-
          num[cnt] = p[i];
-
          nCr(cnt + 1, i + 1);
       }
    }
