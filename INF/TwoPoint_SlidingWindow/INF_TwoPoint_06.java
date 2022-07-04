@@ -1,43 +1,20 @@
 package INF.TwoPoint_SlidingWindow;
-import java.time.zone.ZoneRules;
 import java.util.*;
 // 인프런 30 최대 길이 연속부분수열
 class INF_TwoPoint_06{
     public int solution(int N, int K, int[] arr){
-        int answer = Integer.MIN_VALUE;
-        int cursor = 0, idx = 0, count = 0;
-        boolean oneFlag = true;
-        int nextCursor = -1;
-
-        while(idx < N){
-            
-            if(arr[idx] == 1) oneFlag = true;
-            if(arr[idx] == 0){
-                if(count == 1) nextCursor = idx+1;
-                if(!oneFlag) nextCursor = idx+1;
-                count++;
-                oneFlag = false;
-                // System.out.println("update " + nextCursor);
+        int answer = 0, cnt = 0, lt = 0;
+        for(int rt=0;rt<N;rt++){
+            if(arr[rt]==0) cnt++;
+            while(cnt>K){
+                if(arr[lt]==0) cnt--;   // lt가 쫒아가기
+                lt++;
             }
-
-            if(nextCursor != -1 && count > K){ // 계산하고 커서와 인덱스 재설정
-                answer = Math.max(idx-cursor, answer);
-                // System.out.println(idx + " " + cursor + " now!!");
-                // System.out.println("log@@@@ "+ nextCursor + " " + answer);
-                cursor = nextCursor;
-                idx = nextCursor;
-                count = 0;
-            } 
-            
-            if(idx == N-1){ 
-                answer = Math.max(N - cursor, answer);
-                // System.out.println(idx + " " + cursor + " now!!");
-                // System.out.println("log@@@@ " + answer);
-            }
-            
-            idx++;
+            answer = Math.max(answer, rt-lt+1);
         }
+
         return answer;
+
 	}
 	public static void main(String[] args){
 		INF_TwoPoint_06 T = new INF_TwoPoint_06();
