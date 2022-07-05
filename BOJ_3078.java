@@ -13,23 +13,26 @@ public class BOJ_3078 {
         for(int i=0;i<N;i++)
             classMate[i] = br.readLine().toString().length();
         int idx = 1, cursor = 0;
+        for(int rt=0;rt<N;rt++){
 
-        while(idx < N){
-            if(idx-cursor <= K){
-                if(classMate[cursor] == classMate[idx]){
-                    answer++;
-                    System.out.println("cursor: "+cursor+" idx: "+idx);
-                }
-                if(idx < N-1) idx++;
-                else if(idx == N-1){
-                    cursor++; idx = cursor + 1;
-                }
-            }else{
-                cursor++;
-                idx = cursor + 1;
-            }
-            if(idx == N) break;
         }
+
+        // while(idx < N){
+        //     if(idx-cursor <= K){
+        //         if(classMate[cursor] == classMate[idx]){
+        //             answer++;
+        //             System.out.println("cursor: "+cursor+" idx: "+idx);
+        //         }
+        //         if(idx < N-1) idx++;
+        //         else if(idx == N-1){
+        //             cursor++; idx = cursor + 1;
+        //         }
+        //     }else{
+        //         cursor++;
+        //         idx = cursor + 1;
+        //     }
+        //     if(idx == N) break;
+        // }
         System.out.println(answer);
     }
 }
