@@ -1,25 +1,44 @@
+package BOJ.Gold;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 // 골드 4 좋은 친구
+// 못 풀어서 다른사람 풀이 참고,,, 나중에 다시 도전하자
 public class BOJ_3078 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
+        Queue<Integer>[] queues = new Queue[21];
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
-        int[] classMate = new int[N];
-        int answer = 0;
-        for(int i=0;i<N;i++)
-            classMate[i] = br.readLine().toString().length();
 
-        int idx = 1, cursor = 0;
-        for(int rt=0;rt<N;rt++){
-            
+        // 각 숫자에 해당하는 큐를 만듬...
+        for (int i = 0; i < 21; i++) {
+            queues[i] = new LinkedList<>();
         }
 
-        
-        System.out.println(answer);
+        // 각 숫자에 맞는 큐를 들고있으며 큐의 peek과 비교하여 범위를 벗어나면 poll -> k 짜리 슬라이딩
+        long count = 0;
+        for (int i = 0; i < N; i++) {
+            int length = br.readLine().trim().length();
+
+            if(queues[length].isEmpty()){
+                queues[length].offer(i);
+                
+            } else {
+                while(i- queues[length].peek() > K){
+                        queues[length].poll();
+                        if(queues[length].isEmpty()){
+                            break;
+                        }
+                }
+                count += queues[length].size();
+                System.out.println(count);
+                queues[length].offer(i);
+            }
+        }
+        System.out.println(queues);
+        System.out.println(count);
     }
 }
 
