@@ -1,3 +1,4 @@
+package BOJ.Bronze;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 // 브론즈 2 문자열 분석
