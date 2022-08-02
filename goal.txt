@@ -1,3 +1,9 @@
+### Last History
+
+work#023_220802
+cafe#002_220723
+home#004_220802
+
 [inf]
 
 String - 12/12                       
@@ -14,7 +20,7 @@ dynamic Programming - 0/6
 
 
 [alg]
-8/2 hash, stack, queue      10/12
+8/2 hash, stack, queue      12/12
 8/4 Sorting and Searching   0/10
 8/5 Recursive, Tree, Gragh  0/14
 8/6 Recursive, Tree, Gragh  0/14

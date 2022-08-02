@@ -2,19 +2,26 @@ package INF.Stack_Queue;
 import java.util.*;
 // 인프런 40 쇠막대기
 class INF_Stack_05{
-	public String solution(String S){
-		StringBuilder sb = new StringBuilder();
+	public int solution(String S){
+		int answer = 0;
         char[] ch = S.toCharArray();
-        Queue<Character> q = new LinkedList<>();
-        for(char x : ch) q.offer(x);
-        int count = 0;
-        while(!q.isEmpty()){
-            char x = q.poll();
-            if(count == 0 && Character.isAlphabetic(x)) sb.append(x);
-            if(x == '(') count++;
-            else if(x == ')') count--;
+        Stack<Character> stack = new Stack<>();
+        
+        for(int i=0; i<ch.length;i++){
+            if(ch[i] == '('){
+                stack.push(ch[i]);
+            }else{
+                if(ch[i-1] == '('){
+                    stack.pop();
+                    answer += stack.size();
+                    // System.out.println(stack);
+                }else{
+                    stack.pop();
+                    answer++; 
+                }
+            }
         }
-		return sb.toString();
+		return answer;
 	}
 	public static void main(String[] args){
 		INF_Stack_05 T = new INF_Stack_05();
@@ -38,3 +45,13 @@ class INF_Stack_05{
 // 쇠막대기는 레이저에 의해 몇 개의 조각으로 잘려지는데, 위 예에서 가장 위에 있는 두 개의 쇠막대기는 각각 3개와 2개의 조각으로 잘려지고,
 // 이와 같은 방식으로 주어진 쇠막대기들은 총 17개의 조각으로 잘려진다.
 // 쇠막대기와 레이저의 배치를 나타내는 괄호 표현이 주어졌을 때, 잘려진 쇠막대기 조각의 총 개수를 구하는 프로그램을 작성하시오.
+
+// ()(((()())(())()))(())    ->   17
+
+// (((()(()()))(())()))(()())   ->  24
+
+// ((( (()()))(())()))(()()) 
+// (((( ()))(())()))(()()) 
+// (((( ))(())()))(()())
+// ((( )()))(()())
+// (( ))(()())
