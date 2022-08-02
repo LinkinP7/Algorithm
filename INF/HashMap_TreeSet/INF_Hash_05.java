@@ -4,7 +4,7 @@ import java.util.*;
 class INF_Hash_05{
 	public int solution(int N, int K, int[] arr){
         int answer = -1 ;
-        TreeSet<Integer> Tset = new TreeSet<>(Collections.reverseOrder());
+        TreeSet<Integer> Tset = new TreeSet<>(Collections.reverseOrder());  // 중복제거를 위해 사용, 정렬에 필요한 트리를 만드려면 TreeMap -> 이건 이진트리
 
         // nCk 
         for(int i=0;i<N;i++){
@@ -14,8 +14,12 @@ class INF_Hash_05{
                 }
             }
         }
-        System.out.println(Tset.size());
-        Tset.toArray();
+        // System.out.println(Tset.size());
+        int cnt = 0;
+        for(int x : Tset){
+            cnt++;
+            if(cnt==K) return x;
+        }
 		return answer;
 	}
 	public static void main(String[] args){
@@ -39,3 +43,6 @@ class INF_Hash_05{
 
 // 10 3
 // 13 15 34 23 45 65 33 11 26 42     ->   143
+
+// TreeSet -> add, remove, size, first(첫번째값), last
+               

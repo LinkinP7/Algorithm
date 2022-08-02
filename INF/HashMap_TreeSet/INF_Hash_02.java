@@ -7,7 +7,7 @@ class INF_Hash_02{
         HashMap<Character, Integer> hash = new HashMap<>();
 
       	for(char x : word_A.toCharArray())
-            hash.put(x, hash.getOrDefault(x, 0)+1);
+            hash.put(x, hash.getOrDefault(x, 0)+1);   
 
       	for(char x : word_B.toCharArray()){
            if(!hash.containsKey(x) || hash.get(x) == 0) return "NO";
