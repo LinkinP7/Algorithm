@@ -1,7 +1,7 @@
 package INF.Sorting_Searching;
 import java.util.*;
-// 인프런 44 선택 정렬
-class INF_Sorting_01{
+// 인프런 51 이분검색
+class INF_Sorting_08{
 	public String solution(int N, int[] arr){
 		StringBuilder sb = new StringBuilder();
 
@@ -23,7 +23,7 @@ class INF_Sorting_01{
         return sb.toString();
 	}
 	public static void main(String[] args){
-		INF_Sorting_01 T = new INF_Sorting_01();
+		INF_Sorting_08 T = new INF_Sorting_08();
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
         int[] arr = new int[N];
@@ -33,8 +33,7 @@ class INF_Sorting_01{
 	}
 }
 
-// 선택정렬은 2중포문, i에서 j 부터 시작해 가장 작은 숫자를 구해(선택해) 스위칭한다.(작은 숫자면 오름차순, 큰 숫자면 내림차순)
-// for(int j = i+1; j<N;j++) 으로 돈다.
+// 선택정렬은 2중포문, i에서 j 부터 시작해 가장 작은 숫자를 구해 스위칭한다.(작은 숫자면 오름차순, 큰 숫자면 내림차순)
 
 // N개이 숫자가 입력되면 오름차순으로 정렬하여 출력하는 프로그램을 작성하세요.
 // 정렬하는 방법은 선택정렬입니다.
