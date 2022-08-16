@@ -4,26 +4,33 @@ import java.util.*;
 class INF_Sorting_06{
 	public String solution(int N, int[] arr){
 		String answer = "";
-        boolean Flag = true;
+        boolean Flag = false, find = true;
+        int dupIdx = 0;
+
         for(int i=0;i<N-1;i++){
-            if(i == N-2 && Flag){
-                answer = i+1 + " " + i+2;
-                // sb.append(i+1).append(" ").append(i+2);
-                break;
-            }else if(i == N-2 && !Flag){
-                
-            }
             if(arr[i] > arr[i+1]){
-                if(Flag){
-                    answer += i+1;
-                    // sb.append(i+1).append(" ");
-                    Flag = false;
+                if(Flag && find){
+                    answer = dupIdx+1 + " " + (i+2);
+                    break;    
+                }
+                
+                if(i == N-2 && find){
+                    answer = (i+1) + " " + (i+2);
                 }else{
-                    answer += " " + i+2;
-                    // sb.append(i+2); 
-                    break;
+                    if(find){
+                        answer += (i+1);
+                        find = false;
+                    }else{
+                        answer += " " + (i+2);
+                        break;
+                    } 
+                }
+            }else if(arr[i] == arr[i+1]){  // 중복일때 처음 인덱스 저장
+                if(!Flag){
+                    dupIdx = i;
+                    Flag = true;
                 } 
-            }
+            }else Flag = false;
         }
         return answer;
 	}
@@ -38,7 +45,7 @@ class INF_Sorting_06{
 	}
 }
 
-// 런타임 에러 -> 1 2 3 5 4 같이 맨 끝에서 둘이 바꾼 경우를 생각 못함, 아마 이것 때문일것이다.
+// 런타임 에러 -> 1 2 3 5 4 같이 맨 끝에서 둘이 바꾼 경우를 생각 못함, 아마 이것 때문일것이다. 아니었다.. 중복을 컨트롤 못함.. 
 // class INF_Sorting_06{
 // 	public String solution(int N, int[] arr){
 // 		StringBuilder sb = new StringBuilder();

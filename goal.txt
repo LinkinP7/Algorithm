@@ -1,6 +1,6 @@
 ### Last History
 
-work#024_220803
+work#025_220816
 cafe#002_220723
 home#004_220802
 
@@ -11,7 +11,7 @@ Array - 12/12 *
 Two Pointer, Silding Window - 6/6 *    
 HashMap, TreeSet - 5/5 *              
 Stack,Queue - 8/8 *                      
-Sorting and Searching - 5/10        
+Sorting and Searching - 6/10        
 Recursive,Tree,Gragh - 0/14          
 DFS, BFS - 0/15                      
 Greedy - 0/8                        
@@ -19,14 +19,11 @@ dynamic Programming - 0/6
 
 
 [alg]
-8/2 hash, stack, queue      12/12
-8/4 Sorting and Searching   5/10
-8/5 Recursive, Tree, Gragh  0/14
-8/6 Recursive, Tree, Gragh  0/14
-8/7 DFS, BFS                0/15
-8/8 DFS, BFS                0/15
-8/9 Greedy                  0/8
-8/10 dynamic Programming    0/6
+Sorting and Searching   6/10
+Recursive, Tree, Gragh  0/14
+DFS, BFS                0/15
+Greedy                  0/8
+dynamic Programming     0/6
 
 
 // 다시 도전하기 => 2346(큐로 풀어보기)
