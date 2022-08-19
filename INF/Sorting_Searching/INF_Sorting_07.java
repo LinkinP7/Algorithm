@@ -5,20 +5,20 @@ class INF_Sorting_07{
 	public String solution(int N, HashMap<Integer, Integer> hash){
 		StringBuilder sb = new StringBuilder();
 
-        for(int i=0;i<N;i++){
-            int idx= i;
-            for(int j = i+1; j<N;j++){
-                if(arr[j] < arr[idx]) idx = j;
-            }
-            if(idx != i){
-                int tmp = arr[i];
-                arr[i] = arr[idx];
-                arr[idx] = tmp;
-            } 
-        }
+        // for(int i=0;i<N;i++){
+        //     int idx= i;
+        //     for(int j = i+1; j<N;j++){
+        //         if(arr[j] < arr[idx]) idx = j;
+        //     }
+        //     if(idx != i){
+        //         int tmp = arr[i];
+        //         arr[i] = arr[idx];
+        //         arr[idx] = tmp;
+        //     } 
+        // }
 
-        for(int x : arr)
-            sb.append(x).append(" ");
+        // for(int x : arr)
+        //     sb.append(x).append(" ");
 
         return sb.toString();
 	}
