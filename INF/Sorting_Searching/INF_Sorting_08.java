@@ -14,14 +14,22 @@ class INF_Sorting_08{
                 }
             }
         }
+        // System.out.println(Arrays.toString(arr));
 
-        System.out.println(Arrays.toString(arr));
-        // int idx = (N%2 == 0 ? N/2-1 : N/2);
-
-        // for(int )
-
+        int start = 0, end = arr.length-1;
+        int mid = 0;
+        while(start <= end){
+            mid = (start+end) / 2;
+            // System.out.println("start mid end : " + start + " " + mid + " " + end);
+            // System.out.println("arrmid : " + arr[mid]);
+            if(arr[mid] == K) return mid+1;
+            else if(arr[mid] < K){
+                start = mid + 1;
+            }else if(arr[mid] > K) {
+                end = mid - 1;
+            }
+        }
         return answer;
-
     }
 	public static void main(String[] args){
 		INF_Sorting_08 T = new INF_Sorting_08();
