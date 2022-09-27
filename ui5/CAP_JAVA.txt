@@ -1,0 +1,63 @@
+[data-model.cds]
+
+entity Books {
+    key ID : Integer;
+    title : String;
+    stock : Integer;
+
+    category : Association to Categories on category.code = category_code;
+    // Categories와 조인 개념
+    // table에 대한 레퍼런스, 물리적인 컬럼이 아닌 foreign key 정도의 개념
+    category_code : Integer;
+}
+
+entity Categories {
+    code : String;
+    name : String;
+    sort_number : Integer;
+}
+
+Association을 걸면 url에서 펼칠수 있다.
+odata/v4/CatalogService/Books?$expand=category&$filter=stock gt 100
+                                              &$filter=category/code eq 'C2' 으로 상세정보까지 확인 가능 
+구글에서 odata v2 url conventions 로 검색하여 버전 2.0으로 참조문서가 있다. 
+
+[cat-service.cds]
+using my.bookshop as my from '../db/data-model';
+
+service CatalogService {
+    @readonly entity Books as projection on my.Books;
+    @readonly entity Categories as projection on my.Categories; // 서비스에 노출, metadata에도 추가됨
+
+    view Book as select from Books mixin {
+        뷰의추가컬럼 test : Association to Categories on test.code = category_code;    
+    } into {    // 새로운 정의가 되었으므로 컬럼을 명시해주면된다. 타입 생략 가능
+        key ID,
+        title,
+        stock,
+        category_code,
+        test.name as category_name
+    }  // 조인뷰 형태이며 into절 안에 있는 컬럼이 서비스에 노출되는 컬럼들이다.
+}
+
+[db]
+데이터베이스는 db/data/..csv 파일이 있다. // sqlite로 사용
+네임스페이스-데이터이름.csv -> my.bookshop-Categories.csv
+
+ID;title;stock;category_code
+1;test1;100;c1
+2;test2;50;c2
+
+
+
+db 에 data-model.cds 가 있으며 여기서 서비스에 노출되는 entity를 작성할 수 있다.
+srv 에 service.cds 가 있으며 데이터모델에 있는 엔티티를 투영(projection)하여 서비스로 노출시킨다.
+공상평에서는 모델하나당 파일 하나씩 쓴다.
+
+[java Handler]
+srv/src/gen/java/cds/gen 에 보면 서비스에 해당되는 java 파일이 있다.
+
+[초기에 npm install 할 때]
+sppcap 에서 npm i 한번
+app 으로 들어가서 npm i 한번 더
+
