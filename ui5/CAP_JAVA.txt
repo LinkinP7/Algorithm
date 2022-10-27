@@ -56,8 +56,20 @@ srv 에 service.cds 가 있으며 데이터모델에 있는 엔티티를 투영(
 
 [java Handler]
 srv/src/gen/java/cds/gen 에 보면 서비스에 해당되는 java 파일이 있다.
+Handler에서 이벤트 핸들링을 진행한다.
 
-[초기에 npm install 할 때]
-sppcap 에서 npm i 한번
-app 으로 들어가서 npm i 한번 더
+@Before(event = cdsService.EVENT_CREATE)  // event = ~~~Context.CDS_NAME
+public void discountBook(CdsCreateEventContext context){
+    String code = (String)context.get("code");
+}
+
+
+-----------------------------------------------------------
+
+CDS 경로상에서 context 언급은 빠지는듯, 이벤트 네임으로 등록?
+TestV4Service/SetApprovalInfo
+
+SetApprovalInfoContext.java -> @EventName, CDS_NAME 이 SetApprovalInfo
+
+즉, @On(event = SetApprovalInfoContext.CDS_NAME) == @On(event = 'SetApprovalInfo')
 
