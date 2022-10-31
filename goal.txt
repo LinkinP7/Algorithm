@@ -1,6 +1,6 @@
 ### Last History
 
-work#026_220819
+work#027_221031
 cafe#004_221029
 home#007_221030
 
@@ -20,7 +20,7 @@ dynamic Programming - 0/6
 
 [alg]
 Sorting and Searching   6/10
-Recursive, Tree, Gragh  0/14
+Recursive, Tree, Gragh  14/14
 DFS, BFS                0/15
 Greedy                  0/8
 dynamic Programming     0/6
