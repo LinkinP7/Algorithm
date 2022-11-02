@@ -1,6 +1,6 @@
 ### Last History
 
-work#028_221101
+work#029_221102
 cafe#004_221029
 home#008_221031
 
@@ -116,3 +116,41 @@ HashMap과 TreeMap -> 시간 복잡도는 Hash가 1로 log(n)인 Tree보다 빠�
 		
 		return -1; // 탐색 실패 
 	}
+
+
+// 중첩 for문 탈출 하는 방법
+Loop1 : 
+for(){
+	Loop2 :
+	for(){
+		if(true) break Loop1;
+	}
+}
+
+for문 앞에 라벨링을 해주고 라벨명으로 break를 걸어주면 된다. 
+j일때도 i 탈출 가능~
+
+
+// 변수 타입체크
+
+class Typetester {
+	void printType(byte x){
+		System.out.println(x + "is a byte");
+	}
+	void printType(int x){
+		System.out.println(x + "is a int");
+	}
+	void printType(float x){
+		System.out.println(x + "is a float");
+	}
+	void printType(double x){
+		System.out.println(x + "is a double");
+	}
+	void printType(char x){
+		System.out.println(x + "is a char");
+	}
+}
+
+
+Typetester type = new Typetester();
+type.printType( testVariable ); 

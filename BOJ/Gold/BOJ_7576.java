@@ -8,7 +8,7 @@ import java.util.Queue;
 // 골드 5 토마토
 public class BOJ_7576 {
 
-    static int M,N,cnt;
+    static int M,N;
     static int[][] box;
     static int[] dx = {0, -1, 0, 1};
     static int[] dy = {-1, 0, 1, 0};
