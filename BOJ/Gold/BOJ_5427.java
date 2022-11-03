@@ -1,3 +1,4 @@
+package BOJ.Gold;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
@@ -8,63 +9,53 @@ import java.util.StringTokenizer;
 // 골드 4 불
 public class BOJ_5427 {
 
-    static int M,N,cnt,answer;
-    static char MAX;
+    static int M,N,answer;
     static char[][] map;
-    static boolean[][] fire, move;
     static int[] dx = {0, -1, 0, 1};
     static int[] dy = {-1, 0, 1, 0};
     static Queue<int[]> Q;
-    static boolean survived;
+    static Queue<int[]> Fire;
 
     static void BFS(){
+        int size = 0;
         while(!Q.isEmpty()){
-            System.out.println(Arrays.deepToString(map));
-            int[] escape = Q.poll();
-            int x = escape[0];
-            int y = escape[1];
-            int isFire = escape[2];
-            int time = escape[3];
-            
-            System.out.println("Queue log: "+x + " " + y + " " + isFire + map[x][y]);
-            if(survived){
-                Q.clear();
-                break;
+            size = Fire.size();
+            for(int i=0;i<size;i++){
+                int[] escape = Fire.poll();
+                int x = escape[0];
+                int y = escape[1];
+
+                for(int j=0;j<4;j++){
+                    int cx = x + dx[j];
+                    int cy = y + dy[j];
+                    if(cx>=0 && cy>=0 && cx<N && cy<M){
+                        if(map[cx][cy] == '@' || map[cx][cy] == '.'){
+                            map[cx][cy] = '*';
+                            Fire.add(new int[]{cx,cy});
+                        }
+                    }
+                }
             }
 
-            for(int i=0;i<4;i++){
-                int cx = x + dx[i];
-                int cy = y + dy[i];
-                if(cx>=0 && cy>=0 && cx<N && cy<M){
-                    System.out.print("log:::: " + map[cx][cy]);
-                    if(isFire == 0){
-                        if(map[cx][cy] == '.' && !move[cx][cy]){
-                            if(map[x][y] == '*') map[cx][cy] = (char)(MAX+1);
-                            else{
-                                map[cx][cy] = (char) (map[x][y] + 1);
-                                if( (int)map[cx][cy] >= (int)MAX ) MAX = map[cx][cy];
-                            } 
-                            System.out.println("    log:::: 다음:  " + map[cx][cy] + "OFFER");
-                            Q.offer(new int[] {cx, cy, 0, time+1});
-                        }else{
-                            System.out.println("    log:::: 다음:  " + map[cx][cy]);
-                        }
-                        if(map[cx][cy] != '#'){
-                            if(cx==0 || cy==0 || cx==N-1 || cy==M-1){
-                                survived = true;
-                                answer = (map[cx][cy]+1)-'@';
-                                System.out.println("SURVIVED!!!!!  "+cx+" "+cy+" "+ map[cx][cy] + " answer : " + answer);
-                            }
+            size = Q.size();
+            for(int i=0;i<size;i++){
+                int[] escape = Q.poll();
+                int x = escape[0];
+                int y = escape[1];
+                int cnt = escape[2];
+
+                for(int j=0;j<4;j++){
+                    int cx = x + dx[j];
+                    int cy = y + dy[j];
+
+                    if(cx>=0 && cy>=0 && cx<N && cy<M){
+                        if(map[cx][cy] == '.'){
+                            map[cx][cy] = '@';
+                            Q.add(new int[]{cx,cy,cnt+1});
                         }
                     }else{
-                        if(map[cx][cy] != '#' && !fire[cx][cy]){
-                            fire[cx][cy] = true;
-                            map[cx][cy] = '*';
-                            System.out.println("    log:::: 다음:  " + map[cx][cy] + "OFFER");
-                            Q.offer(new int[] {cx, cy, 1, time+1});
-                        }else{
-                            System.out.println("    log:::: 다음:  " + map[cx][cy]);
-                        }
+                        answer = cnt+1;
+                        return;
                     }
                 }
             }
@@ -81,45 +72,114 @@ public class BOJ_5427 {
             M = Integer.parseInt(st.nextToken());
             N = Integer.parseInt(st.nextToken());
             Q = new LinkedList<int[]>();
+            Fire = new LinkedList<int[]>();
             map = new char[N][M];
-            fire = new boolean[N][M];
-            move = new boolean[N][M];
-            MAX = '@';
-            cnt = 1;
-            answer = -1;
-            survived = false; 
+            answer = 0;
+
             for(int i=0;i<N;i++){
                 map[i] = br.readLine().toCharArray();
                 for(int j=0;j<M;j++){
-                    if(map[i][j] == '*'){
-                        fire[i][j] = true;
-                        Q.offer(new int[] {i,j,1,0});
-                    } 
-                }
-            }
-
-            for(int i=0;i<N;i++){
-                for(int j=0;j<M;j++){
-                    if(map[i][j] == '@'){
-                        move[i][j] = true;
-                        Q.offer(new int[] {i,j,0,0});
-                    } 
+                    if(map[i][j] == '*') Fire.offer(new int[] {i,j});
+                    else if(map[i][j] == '@') Q.offer(new int[] {i,j,0});
                 }
             }
 
             BFS();
-            
-            // System.out.println("살았니? " + survived + " answer: " + answer);
-            // System.out.println(Survived ? answer+1 : "IMPOSSIBLE");
-            sb.append(survived ? answer+1 : "IMPOSSIBLE").append("\n");
-            // System.out.println(Arrays.deepToString(map));
+            sb.append(answer == 0 ? "IMPOSSIBLE" : answer).append("\n");
         }
         System.out.println(sb);
     }
 }
 
 // #2 첫 실패에서 반례를 찾을 수 없었다.. 풀이는 다 되나, 출구에 도착했을때 바로 나가야 되는데 옆에 길이 있으면 그것도 타더라;;; 
-// Q.clear() 이후 break를 안걸어줘서 밑의 로직에서 다시 큐에 값이 채워져 종료되지 않았다.
+// Q.clear() 이후 break를 안걸어줘서 밑의 로직에서 다시 큐에 값이 채워져 종료되지 않았다. 다시 깝치지 말고 큐 두개로 돌아가자
+// 내 실력으론 시점컨트롤이 너무 힘들다...
+
+// public class BOJ_5427 {
+
+//     static int M,N,answer;
+//     static char[][] map;
+//     static boolean[][] fire;
+//     static int[] dx = {0, -1, 0, 1};
+//     static int[] dy = {-1, 0, 1, 0};
+//     static Queue<int[]> Q;
+//     static boolean survived;
+
+//     static void BFS(){
+//         while(!Q.isEmpty()){
+//             int[] escape = Q.poll();
+//             int x = escape[0];
+//             int y = escape[1];
+//             int isFire = escape[2];
+            
+//             if(map[x][y] != '*'){
+//                 if(x==0 || y==0 || x==N-1 || y==M-1){
+//                     survived = true;
+//                     answer = map[x][y]-'@';
+//                     Q.clear();
+//                     break;
+//                 }
+//             }
+
+//             for(int i=0;i<4;i++){
+//                 int cx = x + dx[i];
+//                 int cy = y + dy[i];
+//                 if(cx>=0 && cy>=0 && cx<N && cy<M){
+//                     if(isFire == 0){
+//                         if(map[cx][cy] == '.'){
+//                             map[cx][cy] = (char) (map[x][y] + 1);
+//                             Q.offer(new int[] {cx, cy, 0});
+//                         }
+//                     }else{
+//                         if(map[cx][cy] != '#' && !fire[cx][cy]){
+//                             fire[cx][cy] = true;
+//                             map[cx][cy] = '*';
+//                             Q.offer(new int[] {cx, cy, 1});
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     public static void main(String[] args) throws Exception {
+//         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//         int T = Integer.parseInt(br.readLine());
+//         StringBuilder sb = new StringBuilder();
+//         StringTokenizer st;
+//         while(T-->0){
+//             st = new StringTokenizer(br.readLine());
+//             M = Integer.parseInt(st.nextToken());
+//             N = Integer.parseInt(st.nextToken());
+//             Q = new LinkedList<int[]>();
+//             map = new char[N][M];
+//             fire = new boolean[N][M];
+//             answer = -1;
+//             survived = false; 
+
+//             for(int i=0;i<N;i++){
+//                 map[i] = br.readLine().toCharArray();
+//                 for(int j=0;j<M;j++){
+//                     if(map[i][j] == '@') Q.offer(new int[] {i,j,0});
+//                 }
+//             }
+
+//             for(int i=0;i<N;i++){
+//                 for(int j=0;j<M;j++){
+//                     if(map[i][j] == '*'){
+//                         Q.offer(new int[] {i,j,1});
+//                         fire[i][j] = true;
+//                     } 
+//                 }
+//             }
+
+//             BFS();
+//             sb.append(survived ? answer+1 : "IMPOSSIBLE").append("\n");
+//         }
+//         System.out.println(sb);
+//     }
+// }
+
 // 반레
 // 1     
 // 3 3
