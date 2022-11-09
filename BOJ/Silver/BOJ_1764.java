@@ -6,8 +6,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
-
 // 실버 4 듣보잡
+// ArrayList
 public class BOJ_1764 {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

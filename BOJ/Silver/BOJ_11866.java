@@ -1,6 +1,7 @@
 package BOJ.Silver;
 import java.util.*;
 // 실버 5 요세푸스 문제 0
+// Queue
 public class BOJ_11866 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

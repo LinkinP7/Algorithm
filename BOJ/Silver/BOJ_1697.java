@@ -5,6 +5,7 @@ import java.util.StringTokenizer;
 import java.util.Queue;
 import java.util.LinkedList;
 // 실버 1 숨바꼭질
+// BFS
 public class BOJ_1697 {
 
     static int N,K,cnt,answer;

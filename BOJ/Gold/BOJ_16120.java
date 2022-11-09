@@ -5,6 +5,7 @@ import java.nio.Buffer;
 import java.util.*;
 
 // 골드 4 PPAP
+// Stack
 public class BOJ_16120 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

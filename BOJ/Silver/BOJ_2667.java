@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 // 실버 1 단지번호붙이기
+// DFS
 public class BOJ_2667 {
 
     static int N, cnt=0;

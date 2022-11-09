@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 // 골드 5 토마토
+// BFS
 public class BOJ_7576 {
 
     static int M,N;

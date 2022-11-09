@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 // 실버 1 음식물 피하기
+// DFS
 public class BOJ_1743 {
     static int N,M,cnt,MAX;
     static int[][] cafe;

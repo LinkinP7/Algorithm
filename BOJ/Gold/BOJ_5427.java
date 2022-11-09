@@ -7,6 +7,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 // 골드 4 불
+// BFS
 public class BOJ_5427 {
 
     static int M,N,answer;

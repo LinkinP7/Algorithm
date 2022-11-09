@@ -1,6 +1,7 @@
 package BOJ.Silver;
 import java.util.*;;
 // 실버 5 소트인사이드
+// Array, Sort
 public class BOJ_1427 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

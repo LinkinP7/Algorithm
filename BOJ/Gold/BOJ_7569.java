@@ -7,6 +7,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 // 골드 5 토마토 
+// BFS
 public class BOJ_7569 {
 
     static int M, N, H;

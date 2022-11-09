@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.StringTokenizer;
 // 실버 2 에디터
+// LinkedList, ListIterator
 public class BOJ_1406 {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,7 +18,6 @@ public class BOJ_1406 {
         for (Character c : input) 
             iter.add(c);
         
-        int cursor = list.size();
         int T = Integer.parseInt(br.readLine());
 
         while(T-->0){
@@ -33,7 +33,6 @@ public class BOJ_1406 {
                 case "P": iter.add(st.nextToken().charAt(0));
                           break;
             }
-            // System.out.println("NOWCURSOR::: " + cursor);
         }
         // System.out.println(list);
         for (Character c : list) 

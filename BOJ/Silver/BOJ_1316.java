@@ -1,6 +1,7 @@
 package BOJ.Silver;
 import java.util.*;
 // 실버 5 그룹 단어 체커
+// List
 public class BOJ_1316 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

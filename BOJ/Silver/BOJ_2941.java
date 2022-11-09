@@ -1,6 +1,7 @@
 package BOJ.Silver;
 import java.util.*;
 // 실버 5 크로아티아 알파벳
+// String
 public class BOJ_2941 {
     public static void main(String[] args) {
         int answer = 0, idx = 0;

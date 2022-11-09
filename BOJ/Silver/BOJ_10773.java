@@ -3,6 +3,7 @@ import java.util.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 // 실버 4 제로
+// Stack
 public class BOJ_10773 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 // 실버 2 유기농 배추
+// BFS
 public class BOJ_1012 {
 
     static int N,M,W,cnt;

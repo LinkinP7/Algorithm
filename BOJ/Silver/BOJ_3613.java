@@ -1,6 +1,7 @@
 package BOJ.Silver;
 import java.util.*;;
 // 실버 3 Java vs C++
+// String
 public class BOJ_3613 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

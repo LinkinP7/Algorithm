@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 // 골드 4 좋은 친구
+// Queue, Sliding Window
 // 못 풀어서 다른사람 풀이 참고,,, 나중에 다시 도전하자
 public class BOJ_3078 {
     public static void main(String[] args) throws Exception {

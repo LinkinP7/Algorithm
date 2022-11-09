@@ -1,6 +1,7 @@
 package BOJ.Silver;
 import java.util.*;
 // 실버 4 큐
+// Queue
 public class BOJ_10845 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

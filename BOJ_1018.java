@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 // 실버 4 체스판 다시 칠하기
+// Brute Force
 public class BOJ_1018 {
 	
 	static boolean[][] chessBoard;
