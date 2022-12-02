@@ -1,3 +1,4 @@
+package BOJ.Silver;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -17,6 +18,19 @@ public class BOJ_1074 {
         c = Integer.parseInt(st.nextToken());
         int M = (int)Math.pow((double)2,(double)N); // 2의 N승
 
+        if(N == 1){
+            for(int i=0;i<4;i++){
+                int cx = 0+dx[i];
+                int cy = 0+dy[i];
+                cnt++;
+                if(cx == r && cy == c){
+                    answer = cnt;
+                    System.out.println(answer == 0 ? 0 : answer-1);
+                    return;
+                } 
+            }
+        }
+
         if(r<M/2 && c<M/2) seperate(0, 0, M/2);
         else if(r<M/2 && c>=M/2){
             cnt = (M/2)*(M/2);
@@ -28,7 +42,8 @@ public class BOJ_1074 {
             cnt = (M/2)*(M/2)*3;
             seperate(M/2, M/2, M/2);
         } 
-        System.out.println(answer != 0 ? answer-1 : 0);
+        System.out.println(answer == 0 ? 0 : answer-1);
+        // System.out.println(answer-1);
     }
 
     static void seperate(int x, int y, int M){
